@@ -1,108 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Mechalorians</title>
-    <link rel="stylesheet" href="src/resources/css/style.css" />
-    <script src="src/resources/js/script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Arimo:wght@400;700&display=swap" rel="stylesheet"/>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Mechalorians</title>
+ <link rel="stylesheet" href="src/resources/css/style.css" />
+ <script src="src/resources/js/script.js" defer></script>
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Arimo:wght@400;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <header class="navbar">
-        <div class="navbar-left">
-            <a href="#" onclick="loadPage('home');"><img class="logo" src="images/mainlogo.png" alt="Mechalorians logo" /></a>
-            <div class="text">
-                <h2 class="d-sof">DON SOFFER</h2>
-                <h1 class="mech">MECHALORIANS</h1>
-                <h2 class="r-team">ROBOTICS TEAM</h2>
-            </div>
-        </div>
-        
-        <div id="popup-menu" class="popup-menu hidden">
-            <nav class="popup-nav">
-                <a href="#" onclick="loadPage('home'); toggleMenu()">Home</a>
-                <a href="#" onclick="loadPage('about'); toggleMenu()">About Us</a>
-                <a href="#" onclick="loadPage('achievements'); toggleMenu()">Achievements</a>
-                <a href="#" onclick="loadPage('sponsorship'); toggleMenu()">Sponsorship</a>
-                <a href="#" onclick="loadPage('contact'); toggleMenu()">Contact</a>
-            </nav>
-        </div>
-        
-        <div id="search-popup" class="hidden">
-            <div class="search-container">
-                <div class="search-header">
-                    <div class="search-icon-header"></div>
-                    <h3 class="search-title">Search Pages</h3>
-                </div>
-                <div class="search-input-container">
-                    <input
-                        type="text"
-                        id="search-input"
-                        placeholder="Type to search..."
-                        autocomplete="off"
-                    />
-                    <div class="search-input-icon"></div>
-                </div>
-                <div class="search-divider"></div>
-                <ul id="search-results"></ul>
-            </div>
-            <div class="search-footer">
-                <span>Press</span>
-                <span class="search-shortcut">ESC</span>
-                <span>to close</span>
-            </div>
-        </div>
-        
-        <nav class="navbar-center">
-            <a href="#" onclick="loadPage('about')">ABOUT US</a>
-            <a href="#" onclick="loadPage('achievements')">ACHIEVEMENTS</a>
-            <a href="#" onclick="loadPage('sponsorship')">SPONSORSHIP</a>
-            <a href="#" onclick="loadPage('contact')">CONTACT</a>
-            <a href="https://forms.office.com/pages/responsepage.aspx?id=6IYDYQKuBkmJnU5aq6b4cQkT3a3zbgBCiCQvnXmTWrdUOTVYWkhMMlFaUzlXWEpDVFpaWUtJQ00yQi4u&route=shorturl" class="apply-btn" target="_blank">REGISTER NOW</a>
-        </nav>
-        
-        <div class="navbar-right">
-            <a href="#" id="search-toggle"><img class="search-icon"src="images/search-icon.png" alt="Search Icon"></a>
-            <a href="#" id="menu-toggle">☰</a>
-        </div>
-    </header>
-    
-    <main id="page-content" style="padding: 40px; max-width: 900px; margin: auto;">
-        <h2>Welcome to the Mechalorians</h2>
-        <p>This is the homepage content.</p>
-    </main>
-    
-    <script>
-        const pages = {
-            home: `
-                <h2>Welcome to the Mechalorians</h2>
-                <p>This is the homepage content.</p>
-            `,
-            about: `
-                <h2>About Us</h2>
-                <p>about us text here later.</p>
-            `,
-            achievements: `
-                <h2>Achievements</h2>
-                <p>achievements content here later.</p>
-            `,
-            sponsorship: `
-                <h2>Sponsorship</h2>
-                <p>sponsorship information here later.</p>
-            `,
-            contact: `
-                <h2>Contact Us</h2>
-                <p>contact info here later.</p>
-            `
-        };
+ <header class="navbar">
+ <div class="navbar-left">
+ <a href="#" onclick="loadPage('home');"><img class="logo" src="images/mainlogo.png" alt="Mechalorians logo" /></a>
+ <div class="text">
+ <h2 class="d-sof">DON SOFFER</h2>
+ <h1 class="mech">MECHALORIANS</h1>
+ <h2 class="r-team">ROBOTICS TEAM</h2>
+ </div>
+ </div>
+ <div id="popup-menu" class="popup-menu hidden">
+ <nav class="popup-nav">
+ <a href="#" onclick="loadPage('home'); toggleMenu()">Home</a>
+ <a href="#" onclick="loadPage('events'); toggleMenu()">Events</a>
+ <a href="#" onclick="loadPage('about'); toggleMenu()">About Us</a>
+ <a href="#" onclick="loadPage('achievements'); toggleMenu()">Achievements</a>
+ <a href="#" onclick="loadPage('sponsorship'); toggleMenu()">Sponsorship</a>
+ <a href="#" onclick="loadPage('contact'); toggleMenu()">Contact</a>
+ </nav>
+ </div>
+ <div id="search-popup" class="hidden">
+ <div class="search-container">
+ <div class="search-header">
+ <div class="search-icon-header"></div>
+ <h3 class="search-title">Search Pages</h3>
+ </div>
+ <div class="search-input-container">
+ <input
+type="text"
+id="search-input"
+placeholder="Type to search..."
+autocomplete="off"
+ />
+ <div class="search-input-icon"></div>
+ </div>
+ <div class="search-divider"></div>
+ <ul id="search-results"></ul>
+ </div>
+ <div class="search-footer">
+ <span>Press</span>
+ <span class="search-shortcut">ESC</span>
+ <span>to close</span>
+ </div>
+ </div>
+ <nav class="navbar-center">
+ <a href="#" onclick="loadPage('about')">ABOUT US</a>
+ <a href="#" onclick="loadPage('events')">EVENTS</a>
+ <a href="#" onclick="loadPage('achievements')">ACHIEVEMENTS</a>
+ <a href="#" onclick="loadPage('sponsorship')">SPONSORSHIP</a>
+ <a href="#" onclick="loadPage('contact')">CONTACT</a>
+ <a href="https://forms.office.com/pages/responsepage.aspx?id=6IYDYQKuBkmJnU5aq6b4cQkT3a3zbgBCiCQvnXmTWrdUOTVYWkhMMlFaUzlXWEpDVFpaWUtJQ00yQi4u&route=shorturl" class="apply-btn" target="_blank">REGISTER NOW</a>
+ </nav>
+ <div class="navbar-right">
+ <a href="#" id="search-toggle"><img class="search-icon"src="images/search-icon.png" alt="Search Icon"></a>
+ <a href="#" id="menu-toggle">☰</a>
+ </div>
+ </header>
+ 
+ <main id="page-content">
+ <!-- Hero Section -->
+ <section class="hero-section">
+ <div class="hero-background">
+ <img src="images/hero-background.jpg" alt="School Campus" class="hero-image">
+ <div class="hero-overlay"></div>
+ </div>
+ 
+  <div class="hero-content">
+  <div class="hero-text">
+  <h1 class="hero-title">
+  EMPOWERING STUDENTS <span class="highlight-text">IN S.T.E.M.</span><br>
+  at<span class="italic-text">the</span> <span class="highlight-text">INTERSECTION</span> <span class="italic-text">of</span><br>
+  <span class="highlight-text">SCIENCE</span>, <span class="highlight-text">TECHNOLOGY</span>, <span class="highlight-text">ENGINEERING</span>,<br> <span class="italic-text">and</span> </span> <span class="highlight-text">MATHEMATICS</span>
+  </h1>
+  <p class="hero-subtitle">S.T.E.M. Robotics Program supported by the Don Soffer Aventura High School</p>
+  </div>
+ 
+ 
+ <div class="hero-buttons">
+ <a href="https://forms.office.com/pages/responsepage.aspx?id=6IYDYQKuBkmJnU5aq6b4cQkT3a3zbgBCiCQvnXmTWrdUOTVYWkhMMlFaUzlXWEpDVFpaWUtJQ00yQi4u&route=shorturl" class="hero-btn register-btn" target="_blank">REGISTER NOW</a>
+ <a href="#" onclick="loadPage('sponsorship')" class="hero-btn sponsorship-btn">SPONSORSHIP</a>
+ </div>
+ </div>
+ </section>
+ </main>
+ 
+ <script>
+const pages = {
+home: `
+ <!-- Hero Section -->
+ <section class="hero-section">
+ <div class="hero-background">
+ <img src="images/hero-background.jpg" alt="School Campus" class="hero-image">
+ <div class="hero-overlay"></div>
+ </div>
+ 
+ <div class="hero-content">
+ <div class="hero-text">
+ <h1 class="hero-title">
+ EMPOWERING STUDENTS <span class="highlight-text">IN S.T.E.M.</span><br>
+ at<span class="italic-text">the</span> <span class="highlight-text">INTERSECTION</span> <span class="italic-text">of</span><br>
+ <span class="highlight-text">SCIENCE</span>, <span class="highlight-text">TECHNOLOGY</span>, <span class="highlight-text">ENGINEERING</span>,<br> <span class="italic-text">and</span> </span> <span class="highlight-text">MATHEMATICS</span>
+ </h1>
+ <p class="hero-subtitle">S.T.E.M. Robotics Program supported by the Don Soffer Aventura High School</p>
+ </div>
+ 
+ <div class="hero-buttons">
+ <a href="https://forms.office.com/pages/responsepage.aspx?id=6IYDYQKuBkmJnU5aq6b4cQkT3a3zbgBCiCQvnXmTWrdUOTVYWkhMMlFaUzlXWEpDVFpaWUtJQ00yQi4u&route=shorturl" class="hero-btn register-btn" target="_blank">REGISTER NOW</a>
+ <a href="#" onclick="loadPage('sponsorship')" class="hero-btn sponsorship-btn">SPONSORSHIP</a>
+ </div>
+ </div>
+ </section>
+ `,
+about: `
+ <div style="padding: 40px; max-width: 900px; margin: auto;">
+ <h2>About Us</h2>
+ <p>about us text here later.</p>
+ </div>
+ `,
+events: `
+ <div style="padding: 40px; max-width: 900px; margin: auto;">
+ <h2>Events</h2>
+ <p>event text here later.</p>
+ </div>
+ `,
+achievements: `
+ <div style="padding: 40px; max-width: 900px; margin: auto;">
+ <h2>Achievements</h2>
+ <p>achievements content here later.</p>
+ </div>
+ `,
+sponsorship: `
+ <div style="padding: 40px; max-width: 900px; margin: auto;">
+ <h2>Sponsorship</h2>
+ <p>sponsorship information here later.</p>
+ </div>
+ `,
+contact: `
+ <div style="padding: 40px; max-width: 900px; margin: auto;">
+ <h2>Contact Us</h2>
+ <p>contact info here later.</p>
+ </div>
+ `
+ };
 
-        function loadPage(page) {
-            const content = pages[page] || pages.home;
-            document.getElementById("page-content").innerHTML = content;
-        }
-    </script>
+function loadPage(page) {
+const content = pages[page] || pages.home;
+document.getElementById("page-content").innerHTML = content;
+}
+ </script>
 </body>
 </html>

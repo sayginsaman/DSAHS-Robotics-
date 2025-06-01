@@ -30,6 +30,7 @@ const searchResults = document.getElementById('search-results');
 const pagesData = [
     { id: 'home', title: 'Home', content: 'Welcome to the Mechalorians. This is the homepage content.' },
     { id: 'about', title: 'About Us', content: 'Put your about us text here later.' },
+    { id: 'events', title: 'Events', content: 'Event info here later.' },
     { id: 'achievements', title: 'Achievements', content: 'Put your achievements content here later.' },
     { id: 'sponsorship', title: 'Sponsorship', content: 'Put your sponsorship information here later.' },
     { id: 'contact', title: 'Contact Us', content: 'Put your contact info here later.' },
